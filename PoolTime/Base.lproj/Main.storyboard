@@ -7,20 +7,112 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Landing View Controller-->
         <scene sceneID="Ex9-tt-Sff">
             <objects>
-                <viewController id="14Z-ZV-04W" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="14Z-ZV-04W" customClass="LandingViewController" customModule="PoolTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MV4-sl-ywH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="MEz-4i-HoD">
+                                <rect key="frame" x="16" y="596" width="382" height="179"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mVY-Xf-DTi">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="67.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zek-jy-tjJ">
+                                        <rect key="frame" x="0.0" y="93.5" width="382" height="85.5"/>
+                                        <state key="normal" title="Next"/>
+                                        <connections>
+                                            <action selector="nextButtonPressed:" destination="14Z-ZV-04W" eventType="touchUpInside" id="c4e-89-9PT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4Vb-qW-S0T" firstAttribute="bottom" secondItem="MEz-4i-HoD" secondAttribute="bottom" constant="87" id="6Cc-6b-VpS"/>
+                            <constraint firstItem="MEz-4i-HoD" firstAttribute="leading" secondItem="4Vb-qW-S0T" secondAttribute="leading" constant="16" id="TVM-fu-Oza"/>
+                            <constraint firstItem="4Vb-qW-S0T" firstAttribute="trailing" secondItem="MEz-4i-HoD" secondAttribute="trailing" constant="16" id="kTV-a5-1xq"/>
+                            <constraint firstItem="MEz-4i-HoD" firstAttribute="height" secondItem="MV4-sl-ywH" secondAttribute="height" multiplier="1/5" id="lf9-hu-iJE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4Vb-qW-S0T"/>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="Zek-jy-tjJ" id="BRx-eb-ThN"/>
+                        <outlet property="phoneNumberTextField" destination="mVY-Xf-DTi" id="RlO-SW-a3X"/>
+                        <segue destination="cvH-jD-pCh" kind="show" identifier="toRegister1" id="bek-cK-Ug8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IvG-3i-fKj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-791" y="15"/>
+        </scene>
+        <!--Register1 View Controller-->
+        <scene sceneID="V2B-Et-6fk">
+            <objects>
+                <viewController id="cvH-jD-pCh" customClass="Register1ViewController" customModule="PoolTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J4Q-yc-IyR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xcm-wd-70I">
+                                <rect key="frame" x="16" y="299" width="382" height="210.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UJn-BC-POr">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="64.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Paq-bn-OOv">
+                                        <rect key="frame" x="0.0" y="72.5" width="382" height="65"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6mi-rL-fRL">
+                                        <rect key="frame" x="0.0" y="145.5" width="382" height="65"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ht1-Ps-JRP">
+                                <rect key="frame" x="16" y="589.5" width="382" height="64.5"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="cvH-jD-pCh" eventType="touchUpInside" id="EzV-KG-Q0C"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ht1-Ps-JRP" firstAttribute="top" secondItem="6mi-rL-fRL" secondAttribute="bottom" constant="80" id="3zI-Cp-vcK"/>
+                            <constraint firstItem="ht1-Ps-JRP" firstAttribute="width" secondItem="6mi-rL-fRL" secondAttribute="width" id="WCd-lh-uW4"/>
+                            <constraint firstItem="xcm-wd-70I" firstAttribute="height" secondItem="J4Q-yc-IyR" secondAttribute="height" multiplier="1/4" id="eYd-vQ-qaA"/>
+                            <constraint firstItem="xcm-wd-70I" firstAttribute="centerY" secondItem="HP2-2a-Kbc" secondAttribute="centerY" id="f1Y-58-zVP"/>
+                            <constraint firstItem="xcm-wd-70I" firstAttribute="centerX" secondItem="HP2-2a-Kbc" secondAttribute="centerX" id="hTa-LC-zlU"/>
+                            <constraint firstItem="HP2-2a-Kbc" firstAttribute="trailing" secondItem="xcm-wd-70I" secondAttribute="trailing" constant="16" id="wcO-Vd-1lK"/>
+                            <constraint firstItem="ht1-Ps-JRP" firstAttribute="height" secondItem="6mi-rL-fRL" secondAttribute="height" id="xVn-1R-a2r"/>
+                            <constraint firstItem="xcm-wd-70I" firstAttribute="leading" secondItem="HP2-2a-Kbc" secondAttribute="leading" constant="16" id="yxv-BD-p8W"/>
+                            <constraint firstItem="ht1-Ps-JRP" firstAttribute="centerX" secondItem="6mi-rL-fRL" secondAttribute="centerX" id="zCe-xO-0dr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HP2-2a-Kbc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="A3Z-Ia-mAE"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="6mi-rL-fRL" id="7PE-az-uDI"/>
+                        <outlet property="firstNameTextField" destination="UJn-BC-POr" id="6SJ-Xg-7Xw"/>
+                        <outlet property="lastNameTextField" destination="Paq-bn-OOv" id="fnk-CW-4vj"/>
+                        <outlet property="nextButton" destination="ht1-Ps-JRP" id="m2z-hV-sY0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KyT-nc-u1v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="175" y="15"/>
         </scene>
     </scenes>
 </document>
