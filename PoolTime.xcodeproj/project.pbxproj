@@ -26,6 +26,8 @@
 		C4BEDB0023C3EB610055CE5A /* BookingReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BEDAFF23C3EB610055CE5A /* BookingReview.swift */; };
 		C4BEDB0523C3ECBC0055CE5A /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BEDB0423C3ECBC0055CE5A /* LandingViewController.swift */; };
 		C4BEDB0723C3EE480055CE5A /* Register1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BEDB0623C3EE480055CE5A /* Register1ViewController.swift */; };
+		C4BEDB0923C3F0DF0055CE5A /* Register2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BEDB0823C3F0DF0055CE5A /* Register2ViewController.swift */; };
+		C4BEDB0B23C3F2D20055CE5A /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BEDB0A23C3F2D20055CE5A /* UserController.swift */; };
 		F5AB97DD4B351C43D756D6E4 /* Pods_PoolTimeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC335DFCA7D08151C15E34B6 /* Pods_PoolTimeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,8 @@
 		C4BEDAFF23C3EB610055CE5A /* BookingReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingReview.swift; sourceTree = "<group>"; };
 		C4BEDB0423C3ECBC0055CE5A /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		C4BEDB0623C3EE480055CE5A /* Register1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register1ViewController.swift; sourceTree = "<group>"; };
+		C4BEDB0823C3F0DF0055CE5A /* Register2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register2ViewController.swift; sourceTree = "<group>"; };
+		C4BEDB0A23C3F2D20055CE5A /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		CDE823BE37871CBB200AEDD8 /* Pods-PoolTimeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoolTimeTests.debug.xcconfig"; path = "Target Support Files/Pods-PoolTimeTests/Pods-PoolTimeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC335DFCA7D08151C15E34B6 /* Pods_PoolTimeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoolTimeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -136,6 +140,7 @@
 				C40D3D8D23C3E0810081CEC3 /* AppDelegate.swift */,
 				C40D3D8F23C3E0810081CEC3 /* SceneDelegate.swift */,
 				C40D3D9323C3E0810081CEC3 /* Main.storyboard */,
+				C4BEDB0A23C3F2D20055CE5A /* UserController.swift */,
 				C4BEDB0223C3EC760055CE5A /* View Controllers */,
 				C4BEDAEE23C3EAC50055CE5A /* Models */,
 				C40D3D9623C3E0830081CEC3 /* Assets.xcassets */,
@@ -184,6 +189,7 @@
 			children = (
 				C4BEDB0423C3ECBC0055CE5A /* LandingViewController.swift */,
 				C4BEDB0623C3EE480055CE5A /* Register1ViewController.swift */,
+				C4BEDB0823C3F0DF0055CE5A /* Register2ViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -357,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4BEDB0923C3F0DF0055CE5A /* Register2ViewController.swift in Sources */,
 				C4BEDB0023C3EB610055CE5A /* BookingReview.swift in Sources */,
 				C4BEDAF623C3EB250055CE5A /* PoolMapItem.swift in Sources */,
 				C4BEDAFA23C3EB3E0055CE5A /* TimeSlot.swift in Sources */,
@@ -368,6 +375,7 @@
 				C4BEDAF823C3EB300055CE5A /* Address.swift in Sources */,
 				C4BEDAF023C3EAE20055CE5A /* Pool.swift in Sources */,
 				C4BEDB0723C3EE480055CE5A /* Register1ViewController.swift in Sources */,
+				C4BEDB0B23C3F2D20055CE5A /* UserController.swift in Sources */,
 				C4BEDB0523C3ECBC0055CE5A /* LandingViewController.swift in Sources */,
 				C4BEDAFE23C3EB570055CE5A /* Booking.swift in Sources */,
 			);
