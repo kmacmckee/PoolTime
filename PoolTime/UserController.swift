@@ -12,7 +12,7 @@ class UserController {
     
     
     
-    func checkIfRegistered() {
+    func checkIfRegistered(phoneNumber: Int) {
         // check if the number inputted has an account already
     }
     
