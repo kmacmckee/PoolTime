@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		C40D3D8E23C3E0810081CEC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40D3D8D23C3E0810081CEC3 /* AppDelegate.swift */; };
 		C40D3D9023C3E0810081CEC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40D3D8F23C3E0810081CEC3 /* SceneDelegate.swift */; };
-		C40D3D9223C3E0810081CEC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40D3D9123C3E0810081CEC3 /* ViewController.swift */; };
 		C40D3D9523C3E0810081CEC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40D3D9323C3E0810081CEC3 /* Main.storyboard */; };
 		C40D3D9723C3E0830081CEC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C40D3D9623C3E0830081CEC3 /* Assets.xcassets */; };
 		C40D3D9A23C3E0830081CEC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40D3D9823C3E0830081CEC3 /* LaunchScreen.storyboard */; };
 		C40D3DA523C3E0840081CEC3 /* PoolTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40D3DA423C3E0840081CEC3 /* PoolTimeTests.swift */; };
+		C40D3DB023C3E2730081CEC3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40D3DAF23C3E2730081CEC3 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +30,6 @@
 		C40D3D8A23C3E0810081CEC3 /* PoolTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoolTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C40D3D8D23C3E0810081CEC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C40D3D8F23C3E0810081CEC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C40D3D9123C3E0810081CEC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C40D3D9423C3E0810081CEC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C40D3D9623C3E0830081CEC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C40D3D9923C3E0830081CEC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		C40D3DA023C3E0830081CEC3 /* PoolTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoolTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C40D3DA423C3E0840081CEC3 /* PoolTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolTimeTests.swift; sourceTree = "<group>"; };
 		C40D3DA623C3E0840081CEC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C40D3DAF23C3E2730081CEC3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +81,8 @@
 			children = (
 				C40D3D8D23C3E0810081CEC3 /* AppDelegate.swift */,
 				C40D3D8F23C3E0810081CEC3 /* SceneDelegate.swift */,
-				C40D3D9123C3E0810081CEC3 /* ViewController.swift */,
 				C40D3D9323C3E0810081CEC3 /* Main.storyboard */,
+				C40D3DAF23C3E2730081CEC3 /* User.swift */,
 				C40D3D9623C3E0830081CEC3 /* Assets.xcassets */,
 				C40D3D9823C3E0830081CEC3 /* LaunchScreen.storyboard */,
 				C40D3D9B23C3E0830081CEC3 /* Info.plist */,
@@ -200,9 +200,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C40D3D9223C3E0810081CEC3 /* ViewController.swift in Sources */,
 				C40D3D8E23C3E0810081CEC3 /* AppDelegate.swift in Sources */,
 				C40D3D9023C3E0810081CEC3 /* SceneDelegate.swift in Sources */,
+				C40D3DB023C3E2730081CEC3 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
