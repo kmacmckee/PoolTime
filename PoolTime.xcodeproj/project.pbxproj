@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,7 +15,6 @@
 		C40D3D9A23C3E0830081CEC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40D3D9823C3E0830081CEC3 /* LaunchScreen.storyboard */; };
 		C40D3DA523C3E0840081CEC3 /* PoolTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40D3DA423C3E0840081CEC3 /* PoolTimeTests.swift */; };
 		C40D3DB023C3E2730081CEC3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40D3DAF23C3E2730081CEC3 /* User.swift */; };
-		C40D3DB223C3E3230081CEC3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C40D3DB123C3E3230081CEC3 /* GoogleService-Info.plist */; };
 		F5AB97DD4B351C43D756D6E4 /* Pods_PoolTimeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC335DFCA7D08151C15E34B6 /* Pods_PoolTimeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +44,6 @@
 		C40D3DA423C3E0840081CEC3 /* PoolTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolTimeTests.swift; sourceTree = "<group>"; };
 		C40D3DA623C3E0840081CEC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C40D3DAF23C3E2730081CEC3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		C40D3DB123C3E3230081CEC3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CDE823BE37871CBB200AEDD8 /* Pods-PoolTimeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoolTimeTests.debug.xcconfig"; path = "Target Support Files/Pods-PoolTimeTests/Pods-PoolTimeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC335DFCA7D08151C15E34B6 /* Pods_PoolTimeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoolTimeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -87,7 +85,6 @@
 				CDE823BE37871CBB200AEDD8 /* Pods-PoolTimeTests.debug.xcconfig */,
 				B2928A0D21BBBB95AD81B445 /* Pods-PoolTimeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -121,7 +118,6 @@
 				C40D3D9623C3E0830081CEC3 /* Assets.xcassets */,
 				C40D3D9823C3E0830081CEC3 /* LaunchScreen.storyboard */,
 				C40D3D9B23C3E0830081CEC3 /* Info.plist */,
-				C40D3DB123C3E3230081CEC3 /* GoogleService-Info.plist */,
 			);
 			path = PoolTime;
 			sourceTree = "<group>";
@@ -220,7 +216,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C40D3D9A23C3E0830081CEC3 /* LaunchScreen.storyboard in Resources */,
-				C40D3DB223C3E3230081CEC3 /* GoogleService-Info.plist in Resources */,
 				C40D3D9723C3E0830081CEC3 /* Assets.xcassets in Resources */,
 				C40D3D9523C3E0810081CEC3 /* Main.storyboard in Resources */,
 			);
