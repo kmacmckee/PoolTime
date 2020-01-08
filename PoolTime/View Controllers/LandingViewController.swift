@@ -10,11 +10,11 @@ import UIKit
 
 class LandingViewController: UIViewController, UITextFieldDelegate {
 
-    
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     
     let userController = UserController()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,6 @@ class LandingViewController: UIViewController, UITextFieldDelegate {
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
     }
     
     // MARK: - Keyboard Config
@@ -38,21 +37,42 @@ class LandingViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height
+                print(self.view.frame.height)
+                print(keyboardSize.height)
+                self.view.frame.origin.y -= keyboardSize.height / 2
+                print(self.view.frame.height)
+                print(keyboardSize.height)
             }
         }
     }
-    
-    
+
     @objc func keyboardWillHide(notification: NSNotification) {
-        if self.view.frame.origin.y != 0 {
-            self.view.frame.origin.y = 0
+        
+        print("WILLHIDE")
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            
+            if self.view.frame.origin.y != 0 {
+                print(self.view.frame.height)
+                print(keyboardSize.height)
+                self.view.frame.origin.y = 0
+                print(self.view.frame.height)
+                print(keyboardSize.height)
+            }
+            
+            
+            
         }
+        
+
     }
     
+    
+    
+    // MARK: - Input Handling
     func formatPhoneNumber(enteredNumber: String) -> Int? {
         
         var numberArray = Array(enteredNumber)
