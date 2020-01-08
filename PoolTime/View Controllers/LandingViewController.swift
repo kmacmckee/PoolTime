@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LandingViewController: UIViewController {
+class LandingViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
@@ -18,11 +18,40 @@ class LandingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        phoneNumberTextField.delegate = self
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard(_:)))
+        self.view.addGestureRecognizer(tapGesture)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+    }
+    
+    // MARK: - Keyboard Config
+    @objc func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        phoneNumberTextField.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        phoneNumberTextField.resignFirstResponder()
+        return true
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
     }
     
     
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
     
     func formatPhoneNumber(enteredNumber: String) -> Int? {
         
@@ -45,7 +74,6 @@ class LandingViewController: UIViewController {
         }
         
         return phoneNumberTotal
-        
     }
     
     
@@ -53,15 +81,18 @@ class LandingViewController: UIViewController {
     @IBAction func nextButtonPressed(_ sender: Any) {
         
         guard let enteredNumber = phoneNumberTextField.text else { return }
-        
         guard let number = formatPhoneNumber(enteredNumber: enteredNumber) else { return }
         if number == 0 {
             //TODO: send alert "invalid password"
         }
         
+        let isRegistered = userController.checkIfRegistered(phoneNumber: number)
         
-        userController.checkIfRegistered(phoneNumber: number)
-        
+        if isRegistered {
+            userController.logInUser()
+        } else {
+            self.performSegue(withIdentifier: "toRegister1", sender: self)
+        }
         
         self.performSegue(withIdentifier: "toRegister1", sender: self)
     }
